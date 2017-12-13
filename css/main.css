@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Coustard|Prociono');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  /*font-family: 'Coustard';*/
+  background: #000 url("../images/background.jpg") top no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+}
+p {
+  color: whitesmoke;
+  font-weight: bold;
+}
+.pClass{
+  font-size: 2rem;
+}
+h4{
+  font-size: 2rem;
+}
+#btnLondon{
+  font-size: 2rem;
+  background-color: rgb(45, 45, 66);
+  border: 02.rem solid black;
+  color: whitesmoke;
+  margin-top: 0.9rem;
+}
+.navbar-brand {
+  font-family: 'Prociono';
+}
+.description {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.description .main {
+  font-size: 5rem;
+  font-weight: bold;
+  background: -webkit-linear-gradient(blue, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.description .description-paragraph {
+  font-size: 1.8rem;
+}
+.container {
+  width: 100rem;
+  height: 50rem;
+  border: 0.3rem solid darkblue;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+background-color: black;
+}
+h2{
+  color: whitesmoke;
+}
+#gMain {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  background-size: cover;
+  z-index: -1;
+}
+.nav_container{
+  width: 90%;
+  height: 90%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  background-size: cover;
+  background-color: black;
+}
+.navbar-header{
+  height: 100%;
+}
+.collapsed{
+  width: 90%;
+  height: 90%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  background-size: cover;
+  background-color: black;
+  color: whitesmoke;
+}
+.img_nav{
+  width: auto;
+  height: 100%;
+}
+#temp_main{
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .container-gifs {
+    width: 50rem;
+  }
+}
+.listing {
+  padding: 0 0 5px;
+  position: relative;
+  width: 559px;
+  color: whitesmoke;
+}
+#subtitle {
+  width: 430px;
+  font-weight: normal;
+  font-size: 12px;
+  font-family: Arial;
+  color: black;
+}
+.info {
+  float: left;
+  margin: 10px 15px 5px;
+  min-width: 500px;
+  clear: both;
+  color: whitesmoke;
+  margin: 15px 44px 15px 0;
+  overflow: hidden;
+}
+.btn{
+  float: right;
+  color: lightsteelblue;
+  background-color: blue;
+  border: 1px solid darkblue;
+  font-size: 1.5rem;
+}
