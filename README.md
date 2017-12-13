@@ -11,4 +11,4 @@ Created using:
 
 * Gulp
 
-Check out the page: 
+Check out the page:  https://kari-the-unicorn.github.io/Weather_App_With_Ajax_and_JQuery/
