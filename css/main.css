@@ -8,32 +8,79 @@ html {
   font-size: 10px;
 }
 body {
-  /*font-family: 'Coustard';*/
-  background: #000 url("../images/background.jpg") top no-repeat;
+  font-family: 'Yantramanav',sans-serif;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
+  background-image: url("../images/background.jpg");
   height: 100%;
   width: 100%;
 }
+.logo{
+  width: auto;
+   height: 25px;
+}
+
+#entry{
+  font-size: 17px;
+  width: 50%;
+  height: 41px;
+  text-indent: 10px;
+  padding: 0;
+  color: black;
+  vertical-align: middle;
+  cursor: pointer;
+}
 p {
-  color: whitesmoke;
+  color: black;
   font-weight: bold;
+  line-height: 1.15;
+  display: inline;
+}
+.listTown .li{
+  width: 33.333%;
+  display: inline-block;
+  text-overflow: ellipsis;
+}
+.flex{
+  position: relative;
+  align-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+i{
+  color: black;
+  width: 12px;
+  height: 12px;
+}
+.hidd{
+  display: none;
+}
+.block{
+  display: block;
+margin-left: 10%;
 }
 .pClass{
   font-size: 2rem;
+  display: inline;
+
+}
+.img-rounded{
+  background-color: lightblue;
+  margin-left: 20px;
+  width:60;
+  height:60;
 }
 h4{
   font-size: 2rem;
 }
-#btnLondon{
-  font-size: 2rem;
-  background-color: rgb(45, 45, 66);
-  border: 02.rem solid black;
-  color: whitesmoke;
-  margin-top: 0.9rem;
+input, button{
+  /* color: black; */
 }
+
 .navbar-brand {
   font-family: 'Prociono';
+  width: 20%;
 }
 .description {
   padding-top: 1.5rem;
@@ -56,10 +103,10 @@ h4{
   position: relative;
   margin: 0 auto;
   z-index: 1;
-background-color: black;
+/* background-color: black; */
 }
 h2{
-  color: whitesmoke;
+  color: black;
 }
 #gMain {
   position: absolute;
@@ -88,6 +135,7 @@ h2{
 }
 .navbar-header{
   height: 100%;
+  width: 100%;
 }
 .collapsed{
   width: 90%;
@@ -99,7 +147,7 @@ h2{
   margin: auto;
   display: block;
   background-size: cover;
-  background-color: black;
+  background-color: darkblue;
   color: whitesmoke;
 }
 .img_nav{
@@ -123,25 +171,84 @@ h2{
   color: whitesmoke;
 }
 #subtitle {
-  width: 430px;
-  font-weight: normal;
-  font-size: 12px;
-  font-family: Arial;
+  width: 100%;
   color: black;
+  margin-top:10px;
 }
+#subtitle > p {
+    font-weight: bold;
+  font-size: 3rem;
+}
+
 .info {
   float: left;
   margin: 10px 15px 5px;
   min-width: 500px;
   clear: both;
-  color: whitesmoke;
+  color: black;
   margin: 15px 44px 15px 0;
   overflow: hidden;
 }
-.btn{
+#btnReset{
   float: right;
-  color: lightsteelblue;
-  background-color: blue;
-  border: 1px solid darkblue;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
   font-size: 1.5rem;
+}
+
+h1 {
+  color: white;
+  margin: auto;
+  text-align: center
+}
+
+.logo > i {
+  color: white;
+  font-size: 3rem;
+  padding: 5px;
+}
+
+.navbar {
+  padding-top: 10px;
+}
+
+header {
+  opacity:0.6;
+}
+
+.intro > p {
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+.date {
+  margin-top: 20px;
+}
+
+.date > p {
+  font-size: 3rem;
+}
+
+.temp_search {
+  margin-top: 30px;
+}
+
+.temp_search > #submit {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  font-size: 1.5rem;
+}
+
+.temp_search > input {
+  width: 50%;
+}
+
+.widget {
+  margin-top: 30px;
+}
+
+.city_list {
+  margin-top: 30px;
 }
