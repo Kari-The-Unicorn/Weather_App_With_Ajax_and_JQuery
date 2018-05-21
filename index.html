@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>TGA App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="images/thermo_icon.png">
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
@@ -19,174 +18,253 @@
   <header>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
-      <div class="row">
-      <div class="col-md-2">
-          <a class="logo" href="#">
-            <i class="fas fa-sun"></i>
-          </a>
-      </div>
-      <div class="col-md-8">
-          <h1>Weather forecast</h1>
-      </div>
-      <div class="col-md-2">
-        <button id="btnReset" class="btn btn-danger navbar-btn">Reload</button>
-      </div>
+        <div class="row">
+          <div class="col-md-2">
+            <a class="logo" href="#">
+              <i class="fas fa-sun"></i>
+            </a>
+          </div>
+          <div class="col-md-8">
+            <h1>Weather forecast</h1>
+          </div>
+          <div class="col-md-2">
+            <button id="btnReset" class="btn btn-danger navbar-btn">Reload</button>
+          </div>
         </div>
       </div>
     </nav>
   </header>
   <div class="row">
-  <div class="col-md-8 col-md-offset-2">
-  <div class="container-flex">
-  <div class="intro">
-    <p> *This app displays temperature from OpenWeatherMap API to the user every time they press the button for given city.</p>
-    <!-- <img src="images/presenter.jpg" class="img-rounded" alt="weatherwoman" width="304" height="236">  -->
-  </div>
-  <div class="date">
-          <p>Today is:
-          <i class="far fa-calendar-alt"></i>&nbsp&nbsp </p>
-            <p id="todayIs"></p>
-            <p id="todayDate"></p>
-  </div>
-  <div class="temp_search">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="container-flex">
+        <div class="intro">
+          <p> *This app displays temperature from OpenWeatherMap API to the user every time they press the button "Submit" or
+            click enter for given city.</p>
+          <!-- <img src="images/presenter.jpg" class="img-rounded" alt="weatherwoman" width="304" height="236">  -->
+        </div>
+        <div class="date">
+          <p>Today
+            <i class="far fa-calendar-alt"></i>&nbsp&nbsp </p>
+          <p id="todayIs"></p>
+          <p id="todayDate"></p>
+        </div>
+        <div class="temp_search">
           <h4>Check current temperature for:</h4>
           <input id="entry" type="text" placeholder="Write name of a town">
           <button id="submit" class="btn navbar-btn">Submit</button>
           <div id="subtitle"></div>
-  </div>
-  <div class="city_list">
+        </div>
+        <div class="city_list">
           <h4>Or click on a city below to show temperature info for this week</h4>
           <ul class="listTown">
             <li class="li flex">
-                <i class="fas fa-caret-right"></i>
+              <i class="fas fa-caret-right"></i>
               <a id="warsaw">Warsaw</a>
             </li>
             <li class="li flex">
-                <i class="fas fa-caret-right"></i>
+              <i class="fas fa-caret-right"></i>
               <a id="london" class="cities">London</a>
             </li>
             <li class="li flex">
-                <i class="fas fa-caret-right"></i>
+              <i class="fas fa-caret-right"></i>
               <a id="dublin" class="cities">Dublin</a>
             </li>
             <li class="li flex">
-                <i class="fas fa-caret-right"></i>
+              <i class="fas fa-caret-right"></i>
               <a id="copenhagen" class="cities">Copenhagen</a>
             </li>
             <li class="li flex">
-                <i class="fas fa-caret-right"></i>
+              <i class="fas fa-caret-right"></i>
               <a id="berlin" class="cities">Berlin</a>
             </li>
             <li class="li flex">
-                <i class="fas fa-caret-right"></i>
+              <i class="fas fa-caret-right"></i>
               <a id="rome" class="cities">Rome</a>
             </li>
             <li class="li flex">
-                <i class="fas fa-caret-right"></i>
+              <i class="fas fa-caret-right"></i>
               <a id="paris" class="cities">Paris</a>
             </li>
             <li class="li flex">
-                <i class="fas fa-caret-right"></i>
+              <i class="fas fa-caret-right"></i>
               <a id="vienna" class="cities">Vienna</a>
             </li>
             <li class="li flex">
-                <i class="fas fa-caret-right"></i>
+              <i class="fas fa-caret-right"></i>
               <a id="oslo" class="cities">Oslo</a>
             </li>
             <li class="li flex">
-                <i class="fas fa-caret-right"></i>                
+              <i class="fas fa-caret-right"></i>
               <a id="brussels" class="cities">Brussels</a>
             </li>
           </ul>
+        </div>
+        <!-- warsaw widget -->
+        <div class="widget">
+          <div id="wdg1" class="div hidd">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/52d2321d01/warsaw/" data-label_1="WARSAW" data-label_2="WEATHER"
+              data-theme="original">WARSZAWA WEATHER</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = 'https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'weatherwidget-io-js');
+            </script>
           </div>
-<!-- warsaw widget -->
-<div class="widget">
-<div id ="wdg1" class="div hidd">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/52d2321d01/warsaw/" data-label_1="WARSAW" data-label_2="WEATHER"
-      data-theme="original">WARSZAWA WEATHER</a>
-    <script>
-      ! function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (!d.getElementById(id)) {
-          js = d.createElement(s);
-          js.id = id;
-          js.src = 'https://weatherwidget.io/js/widget.min.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        }
-      }(document, 'script', 'weatherwidget-io-js');
-    </script>
-  </div>
 
-  <!-- london widget -->
-  <div id="wdg2" class="div hidd">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/51d51n0d13/london/" data-label_1="LONDON" data-label_2="WEATHER" data-theme="original" >LONDYN WEATHER</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-  </div>
+          <!-- london widget -->
+          <div id="wdg2" class="div hidd">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/51d51n0d13/london/" data-label_1="LONDON" data-label_2="WEATHER"
+              data-theme="original">LONDYN WEATHER</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = 'https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div>
 
-  <!-- dublin widget -->
-  <div id="wdg3" class="div hidd">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/53d35n6d26/dublin/" data-label_1="DUBLIN" data-label_2="WEATHER" data-theme="original" >DUBLIN WEATHER</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-  </div>
+          <!-- dublin widget -->
+          <div id="wdg3" class="div hidd">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/53d35n6d26/dublin/" data-label_1="DUBLIN" data-label_2="WEATHER"
+              data-theme="original">DUBLIN WEATHER</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = 'https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div>
 
-  <!-- copenhagen widget -->
-  <div id="wdg4" class="div hidd">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/55d6812d57/copenhagen/" data-label_1="COPENHAGEN" data-label_2="WEATHER" data-theme="original" >KOPENHAGA WEATHER</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-  </div>
+          <!-- copenhagen widget -->
+          <div id="wdg4" class="div hidd">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/55d6812d57/copenhagen/" data-label_1="COPENHAGEN" data-label_2="WEATHER"
+              data-theme="original">KOPENHAGA WEATHER</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = 'https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div>
 
-  <!-- berlin widget -->
-  <div id="wdg5" class="div hidd">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/52d5213d40/berlin/" data-label_1="BERLIN" data-label_2="WEATHER" data-theme="original" >BERLIN WEATHER</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-  </div>
+          <!-- berlin widget -->
+          <div id="wdg5" class="div hidd">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/52d5213d40/berlin/" data-label_1="BERLIN" data-label_2="WEATHER"
+              data-theme="original">BERLIN WEATHER</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = 'https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div>
 
-  <!-- rome widget -->
-  <div id="wdg6" class="div hidd">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/41d9012d50/rome/" data-label_1="ROME" data-label_2="WEATHER" data-theme="original" >RZYM WEATHER</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-  </div>
+          <!-- rome widget -->
+          <div id="wdg6" class="div hidd">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/41d9012d50/rome/" data-label_1="ROME" data-label_2="WEATHER" data-theme="original">RZYM WEATHER</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = 'https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div>
 
-  <!-- paris widget -->
-  <div id="wdg7" class="div hidd">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/48d862d35/paris/" data-label_1="PARIS" data-label_2="WEATHER" data-theme="original" >PARYŻ WEATHER</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-  </div>
+          <!-- paris widget -->
+          <div id="wdg7" class="div hidd">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/48d862d35/paris/" data-label_1="PARIS" data-label_2="WEATHER"
+              data-theme="original">PARYŻ WEATHER</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = 'https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div>
 
-  <!-- vienna widget -->
-  <div id="wdg8" class="div hidd">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/48d2116d37/vienna/" data-label_1="VIENNA" data-label_2="WEATHER" data-theme="original" >WIEDEŃ WEATHER</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-  </div>
-  <!-- oslo widget -->
-  <div id="wdg9" class="div hidd">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/59d9110d75/oslo/" data-label_1="OSLO" data-label_2="WEATHER" data-theme="original" >OSLO WEATHER</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-  </div>
-  <!-- brussels widget -->
-  <div id="wdg10" class="div hidd">
-    <a class="weatherwidget-io" href="https://forecast7.com/en/50d854d35/brussels/" data-label_1="BRUSSELS" data-label_2="WEATHER" data-theme="original" >BRUKSELA WEATHER</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-  </div>
-  </div>
+          <!-- vienna widget -->
+          <div id="wdg8" class="div hidd">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/48d2116d37/vienna/" data-label_1="VIENNA" data-label_2="WEATHER"
+              data-theme="original">WIEDEŃ WEATHER</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = 'https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div>
+          <!-- oslo widget -->
+          <div id="wdg9" class="div hidd">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/59d9110d75/oslo/" data-label_1="OSLO" data-label_2="WEATHER" data-theme="original">OSLO WEATHER</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = 'https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div>
+          <!-- brussels widget -->
+          <div id="wdg10" class="div hidd">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/50d854d35/brussels/" data-label_1="BRUSSELS" data-label_2="WEATHER"
+              data-theme="original">BRUKSELA WEATHER</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = 'https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div>
         </div>
       </div>
     </div>

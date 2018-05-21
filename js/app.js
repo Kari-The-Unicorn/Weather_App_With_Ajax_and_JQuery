@@ -4,8 +4,7 @@ $(document).ready(function () {
   var dt = new Date();
   var date = ((dt.getDate() < 10) ? '0' : '') + dt.getDate() + '.' + (((dt.getMonth() + 1) < 10) ? '0' : '') + (dt.getMonth() + 1) + '.' + dt.getFullYear();
 
-  document.getElementById("todayIs").innerHTML = days[d.getDay()];
-  // $('#todayIs').innerHTML = days[d.getDay()];
+  document.getElementById("todayIs").innerHTML = days[d.getDay()] +",";
   document.getElementById("todayDate").innerHTML = date;
 
   var warsaw = $('#warsaw');
@@ -95,9 +94,16 @@ $(document).ready(function () {
     wdg10.siblings().removeClass('block');
     wdg10.siblings().addClass('hidd');
   });
+  //event - pressing enter//
+  document.body.onkeydown = function(e) {
+    if (e.keyCode == 13){
+    document.getElementById("submit").click();
+    console.log("enter");
+    }
+};
 
   $('#submit').click(function add() {
-
+    
     var task = $('#entry').val();
 
     if (task != '') {
@@ -113,13 +119,24 @@ $(document).ready(function () {
 
           var response = JSON.parse(xhr.responseText);
           var fahrenh = response.main.temp;
-          
-          $('#submit').click(function () {
 
-            var divTemp = $('<div></div>');
-
-            $('body').append(divTemp);
-
+             
+               var divTemp = $('<div"></div>');
+               var counter=divTemp.length;
+               if(counter>0){
+                // ('#subtitle').innerHTML = "";
+            // ('#subtitle').remove();
+              //   // $('body').find(divTemp).remove();
+              $('#subtitle').empty();
+              //   // divTemp.html('');
+              //   console.log(counter);
+                }
+              // else{
+              //     $('body').append(divTemp);
+              //   };
+                
+                
+               
             var fToCel = (Math.floor(fahrenh - 32) * 5) / 9;
 
             fToCel = Math.ceil(fToCel);
@@ -154,7 +171,6 @@ $(document).ready(function () {
             if (weatherIcon == 803 || weatherIcon == 804) {
               $('<img src="http://openweathermap.org/img/w/04d.png" class="img-rounded" alt="weatherIcon" width="60" height="60"></img></p>').appendTo('#subtitle');
             }
-          });
         };
       };
       return false;
