@@ -16,10 +16,13 @@ body {
   height: 100%;
   width: 100%;
 }
+.row{
+  margin: 0px 15px 0px 15px;
+}
 .logo{
   width: auto;
-   height: 25px;
-   cursor: auto;
+  height: 25px;
+  cursor: auto;
 }
 
 #entry{
