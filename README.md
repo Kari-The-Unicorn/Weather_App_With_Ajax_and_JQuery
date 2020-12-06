@@ -1,5 +1,5 @@
 # Weather_App_With_Ajax_and_JQuery
-Displaying info about current temperature from OpenWeatherMap API - JSON:
+Displaying info about current temperature from OpenWeatherMap API - JSON
 
 Created using:
 
